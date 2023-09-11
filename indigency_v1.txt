@@ -1,0 +1,269 @@
+Title: Indigency "Flowchart"
+Author: Mario Treto
+Before: <link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');"></div>
+<h2 style="text-align:center;">Indigency "Flowchart"</h2>
+<p><b>This is a <a href="https://www.codingthelaw.org/level/2/#mission_p1">class project</a>. You should not rely on it as a source of legal information!</b></p>
+<p>Answer the following questions to see if you qualify for appointed counsel in [insert state name].</p>
+
+Q(1): Are you looking for assistance from a Public Defender in Colorado?
+A: Yes.
+	Q(1.1): Are you facing criminal charges? (Includes both misdemeanor & felonies)
+	A: Yes.
+		Q(1.1.1): Do the charges carry a jail time sentence?
+		A: Yes.
+			Q(1.1.1.1): Have you been released from jail yet? eg:Posted bond or released based on a promise to appear 
+			A: Yes.
+				Q(1.1.1.1.1): Do your current expenses exceed your monthly income? Expenses include: Mortgage/Rent, utilities, child support, alimony, loans, debts, ect..
+				
+				A: Yes, my current expenses exceed my monthly income
+
+					Q(1.1.1.1.1.1): How many members do you have in your household
+				
+					A:1
+						Q(1income): Is your annual household income less or greater than $18,225? 
+						A: Less or equal to
+						
+							Q(liquid1): Do your current liquid assets equal less or more than $1,500?
+
+							A: Less or equal to
+								Q(Loe1):GOTO:3
+
+							A: Greater than
+								Q(gt1):GOTO:1.1.1.2
+
+						A: Greater than
+
+							Q(1incomemore):GOTO:1.1.1.2
+					A:2
+						Q(2income): Is your annual household income less or more than $24,650? 
+						A: Less or equal to
+
+							Q(liquid2): Do your current liquid assets equal less or more than $1,500?
+
+							A: Less or equal to
+								Q(Loe2):GOTO:3
+
+							A: Greater than
+								Q(gt2):GOTO:1.1.1.2
+
+						A: Greater than
+							
+							Q(2incomemore):GOTO:1.1.1.2
+					A:3
+						Q(3income): Is your annual household income less or more than $31,075? 
+						A: Less or equal to
+							Q(liquid3): Do your current liquid assets equal less or more than $1,500?
+
+							A: Less or equal to
+								Q(Loe3):GOTO:3
+
+							A: Greater than
+								Q(gt3):GOTO:1.1.1.2
+
+
+						A: Greater than
+			
+							Q(3incomemore):GOTO:1.1.1.2
+					A:4
+						Q(4income): Is your annual household income less or more than $37,500? 
+						A: Less or equal to
+							Q(liquid4): Do your current liquid assets equal less or more than $1,500?
+
+							A: Less or equal to
+								Q(Loe4):GOTO:3
+
+							A: Greater than
+								Q(gt4):GOTO:1.1.1.2
+
+						A: Greater than
+
+							Q(4incomemore):GOTO:1.1.1.2
+					A:5
+						Q(5income): Is your annual household income less or more than $43,925? 
+						A: Less or equal to
+
+							Q(liquid5): Do your current liquid assets equal less or more than $1,500?
+
+							A: Less or equal to
+								Q(Loe5):GOTO:3
+
+							A: Greater than
+								Q(gt5):GOTO:1.1.1.2
+
+
+						A: Greater than
+
+							Q(5incomemore):GOTO:1.1.1.2
+					A:6
+						Q(6income): Is your annual household income less or more than $50,350? 
+						A: Less or equal to
+
+							Q(liquid6): Do your current liquid assets equal less or more than $1,500?
+
+							A: Less or equal to
+								Q(Loe6):GOTO:3
+
+							A: Greater than
+								Q(gt6):GOTO:1.1.1.2
+
+
+						A: Greater than
+
+							Q(6incomemore):GOTO:1.1.1.2
+					A:7
+						Q(7income): Is your annual household income less or more than $56,775? 
+						A: Less or equal to
+
+							Q(liquid7): Do your current liquid assets equal less or more than $1,500?
+
+							A: Less or equal to
+								Q(Loe7):GOTO:3
+
+							A: Greater than
+								Q(gt7):GOTO:1.1.1.2
+
+
+						A: Greater than
+
+							Q(7incomemore):GOTO:1.1.1.2
+
+
+				A: No, my current expenses do not exceed my monthly income
+					
+					Q(1.1.1.1.1.2): How many members do you have in your household
+				
+					A:1
+						Q(1in): Is your annual household income less or greater than $14,580? 
+						A: Less or equal to
+						
+							Q(liq1): Do your current liquid assets equal less or more than $1,500?
+
+							A: Less or equal to
+								Q(Low1):GOTO:3
+
+							A: Greater than
+								Q(g1):GOTO:1.1.1.2
+
+						A: Greater than
+
+							Q(1more):GOTO:1.1.1.2
+					A:2
+						Q(2in): Is your annual household income less or more than $19,720? 
+						A: Less or equal to
+
+							Q(liq2): Do your current liquid assets equal less or more than $1,500?
+
+							A: Less or equal to
+								Q(Low2):GOTO:3
+
+							A: Greater than
+								Q(g2):GOTO:1.1.1.2
+
+						A: Greater than
+							
+							Q(2more):GOTO:1.1.1.2
+					A:3
+						Q(3in): Is your annual household income less or more than $24,860? 
+						A: Less or equal to
+							Q(liq3): Do your current liquid assets equal less or more than $1,500?
+
+							A: Less or equal to
+								Q(Low3):GOTO:3
+
+							A: Greater than
+								Q(g3):GOTO:1.1.1.2
+
+
+						A: Greater than
+			
+							Q(3more):GOTO:1.1.1.2
+					A:4
+						Q(4in): Is your annual household income less or more than $30,000? 
+						A: Less or equal to
+							Q(liq4): Do your current liquid assets equal less or more than $1,500?
+
+							A: Less or equal to
+								Q(Low4):GOTO:3
+
+							A: Greater than
+								Q(g4):GOTO:1.1.1.2
+
+						A: Greater than
+
+							Q(4more):GOTO:1.1.1.2
+					A:5
+						Q(5in): Is your annual household income less or more than $35,140? 
+						A: Less or equal to
+
+							Q(liq5): Do your current liquid assets equal less or more than $1,500?
+
+							A: Less or equal to
+								Q(Low5):GOTO:3
+
+							A: Greater than
+								Q(g5):GOTO:1.1.1.2
+
+
+						A: Greater than
+
+							Q(5more):GOTO:1.1.1.2
+					A:6
+						Q(6in): Is your annual household income less or more than $40,280? 
+						A: Less or equal to
+
+							Q(liq6): Do your current liquid assets equal less or more than $1,500?
+
+							A: Less or equal to
+								Q(Low6):GOTO:3
+
+							A: Greater than
+								Q(g6):GOTO:1.1.1.2
+
+
+						A: Greater than
+
+							Q(6more):GOTO:1.1.1.2
+					A:7
+						Q(7in): Is your annual household income less or more than $45,420? 
+						A: Less or equal to
+
+							Q(liq7): Do your current liquid assets equal less or more than $1,500?
+
+							A: Less or equal to
+								Q(Low7):GOTO:3
+
+							A: Greater than
+								Q(g7):GOTO:1.1.1.2
+
+
+						A: Greater than
+
+							Q(7more):GOTO:1.1.1.2
+
+			
+	
+
+			A:No.
+				Q(1.1.1.1.2): Due to your incarcerated status, you are automatically eligible to have a public defender appointed to you. Please keep in mind that once you are released from jail, you will need to apply for a public defender. Would you like to see if you qualify based on your income?
+	
+				A: Yes
+					Q(1.1.1.1.2.1):GOTO:1.1.1.1.1	
+
+				A: No
+					Q(1.1.1.1.2.2):GOTO:2
+					
+								
+									
+										
+																	
+					
+		A:No.
+			Q(1.1.1.2): Unfortunately, you are unlikely to qualify for legal assistance from a public defender in CO. GOTO:2	
+	A: No.
+		Q(nocrim):GOTO:1.1.1.2
+A: No. 
+	Q(1.2):GOTO:1.1.1.2
+Q(2): Thank you for your time! **Please review your personal info carefully and feel free to try again.**
+
+Q(3): Based on your responses, your application for a Colorado public defender would likely be approved. Fill out the JDF208 form here: <a href="https://www.courts.state.co.us/Forms/PDF/JDF208.pdf">https://www.courts.state.co.us/Forms/PDF/JDF208.pdf</a>
