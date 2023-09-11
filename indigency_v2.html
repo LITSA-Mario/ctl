@@ -1,0 +1,90 @@
+<html>
+	<head>
+		<title>Indigency_v1.html</title>
+	</head>
+	<body>
+		Title: Indigency "Flowchart"
+Author: Mario Treto
+
+Before: <script src="https://LITSA-Mario.github.io/ctl/functions.js"></script>Before: <link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');"></div>
+<h2 style="text-align:center;">Indigency "Flowchart"</h2>
+<p><b>This is a <a href="https://www.codingthelaw.org/level/2/#mission_p1">class project</a>. You should not rely on it as a source of legal information!</b></p>
+<p>Answer the following questions to see if you qualify for appointed counsel in [insert state name].</p>
+<p>Answer the following questions to see if you qualify for an appointment of counsel or fee waiver.</p>
+After:
+
+<script>
+function fedpov(house,income,percentage){
+	// Determines if your income is less than or equal to
+	// a percentage of the 2023 federal poverty guidelines
+	// for the contiguous United States. See
+	// https://aspe.hhs.gov/poverty-guidelines
+
+		var line = NaN;
+
+		if (house == 1) {
+			line = 14580;
+		} else if (house == 2) {
+			line = 19720;
+		} else if (house == 3) {
+			line = 24860;
+		} else if (house == 4) {
+			line = 30000;
+		} else if (house == 5) {
+			line = 35140;
+		} else if (house == 6) {
+			line = 40280;
+		} else if (house == 7) {
+			line = 45420;
+		} else if (house == 8) {
+			line = 50560;
+		} else if (house > 8) {
+			line = 50560 + (house-8)*5140;
+		}
+
+		if (income <= (line*(percentage/100))) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+</script>
+
+
+
+
+Q(1): Are you looking for assistance from a Public Defender in Colorado?
+A: No.
+	Q(end):GOTO:4
+A: Yes.
+	Q(1.2): Are you facing criminal charges? (Includes both misdemeanor & felonies)
+	A: No.
+		Q(jump2):GOTO:4
+	A: Yes.
+		Q(1.2.2): Do the charges carry a jail time sentence?
+		A: No.
+			Q(Jump):GOTO:4
+		A: Yes.
+			Q(1.2.2.2): Have you been released from jail yet? eg:Posted bond or released based on a promise to appear 
+			A: No.
+				Q(incarcerated): Due to your incarcerated status, you are automatically eligible to have a public defender appointed to you. Please keep in mind that once you are released from jail, you will need to apply for a public defender. Would you like to see if you qualify based on your household income?
+				A:No.
+				A:Yes.
+					Q(reup):GOTO:house 
+			A: Yes.
+				Q(house): How many members do you have in your household
+				X:number
+					Q(income): How much income does your household bring in per year in after taxes?
+					X[javascript:if (fedpov(getvar('house'),getvar('income'),100)){goto('yes') } else { goto('no') }]:number
+Q(yes):GOTO:5
+
+Q(no): Unfortunately, you are unlikely to qualify for legal assistance from a public defender in CO. **Please review your personal info carefully and feel free to try again.**
+																															
+		
+Q(4): Sorry! You are not eligible
+Q(5): Based on your responses, your application for a public defender in CO meets the criteria for approval. GOTO:final
+
+Q(final): You may fill out the JDF208 form here: <a href="https://www.courts.state.co.us/Forms/PDF/JDF208.pdf">https://www.courts.state.co.us/Forms/PDF/JDF208.pdf</a>
+	</body>
+</html>
