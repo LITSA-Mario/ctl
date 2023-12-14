@@ -1,0 +1,49 @@
+Title: DACA "Flowchart"
+Author: Mario Treto
+Before: <link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');"></div>
+<h2 style="text-align:center;">DACA "Flowchart"</h2>
+<p><b>This is a <a href="https://www.codingthelaw.org/#mission">class project</a>. You should not rely on it as a source of legal information!</b></p>
+<p>Answer the following questions to see if someone qualifies for DACA.</p>
+Q(1): Do you want to check your eligability for DACA Dreamer status?
+A: Yes
+	Q(1.1): Okay, is your birthday on or after June 16, 1961?
+
+	A: Yes
+		
+		Q(1.1.1): have you completed high school
+
+		A: Yes
+			Q(1.1.1.1): 	Are you 15 or older?
+			
+			A: Yes
+				
+				
+				Q(1.1.1.1.1): You are eligible
+					
+				
+
+			A: No
+				Q(1.1.1.1.2): Are you currently involved in removal proceedings or have a final removal or VD order
+
+				A: Yes
+					Q(1.1.1.1.2.1): Eligible
+
+				A: No
+					Q(1.1.1.1.2.2): You must wait to find out. Sorry.
+
+		A: No
+			Q(1.1.1.2):	Do you have a GED?
+			
+			A: Yes
+				Q(1.1.1.2.1): GOTO:1.1.1.1
+
+			A: No
+			
+	A: No
+
+	
+		
+	
+A: No
+	Q(1.2): Cool!
